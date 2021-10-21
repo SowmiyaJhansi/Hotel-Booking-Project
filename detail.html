@@ -4,15 +4,33 @@
     <title>Detail</title>
 </head>
 <body>
-    <img src="assests/images/logo.png" height="200px" width="150px" alt="logo" />
+    <a href="index.html"><img src="assests/images/logo.png" height="200px" width="150px" alt="logo" /></a>
     <!--<h2>Header Div</h2>-->
-    <a href="login.html" target="_blank"> Login </a>
+    <a href="login.html"> Login </a>
     <br>
 
     <!--<h2>Content Div</h2>-->
     <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"></a>
     <br>
-    <a href="payment.html"><small>BOOK NOW</small></a>
+    <form autocomplete="off" action="payment.html" method="get">
+    <label for="adults">Adults:</label>
+    <input name="adults" type="number" id="number" min="1" max="10" required/>
+    <br>
+    <label for="name">Name:</label>
+    <input name="name" type="text" required />
+    <br>
+    <label for="date">From Date:</label>
+    <input name="date" type="date" value="dd-mm-yyyy" required />
+    <br>
+    <label for="date">To Date:</label>
+    <input name="date" type="date" value="dd-mm-yyyy" required />
+    <br>
+    <label for="total">Total:</label>
+    <input name="total" type="" readonly />
+    <br>
+    <a href="payment.html"><input type="submit" value="BOOK NOW"></a>
+    <!-- <small>BOOK NOW</small>--> 
+    </form>
     <h2>Radisson Blu Hotel</h2>
     <small>RATING</small>
     <br><br>
@@ -30,7 +48,7 @@
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe explicabo dignissimos odio facere similique numquam optio obcaecati ab quos, illum cupiditate error architecto, laboriosam quibusdam maiores nostrum! Possimus, quibusdam tenetur.</p>
  
     <!--<h2>Footer Div</h2>-->
-    <a href="contact.html" target="_blank"> Contact Us </a>
+    <a href="contact.html"> Contact Us </a>
     <br>
     <a href="https://www.facebook.com" target="_blank"> <img src="assests/images/facebook.png" height="20px" width="22px" /></a>
     <a href="https://www.instagram.com" target="_blank"> <img src="assests/images/instagram.png" height="20px" width="22px" /></a>
