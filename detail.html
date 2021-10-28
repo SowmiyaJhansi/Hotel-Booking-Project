@@ -6,27 +6,48 @@
         html{
             width:100%;
             height:100%;
+            margin:0%;
         }
         body{
             width:100%;
             height:100%;
+            background-color:#e0e0e0;
+            margin:0%;
         }
         div.container {
             width: 500px;
             height:100%;
         }
+        header{
+                background-color: rosybrown;
+        }
+            footer{
+                background-color: rosybrown;
+        }
+        .img{
+            margin: 2% 4% 0% 4%;
+        }
+        .form{
+            margin: 0% 4% 1% 4%;
+        }
+        .description{
+            margin: 1% 4% 2% 4%;
+        }
         </style>
 </head>
 <body>
-    <header class="w3-container"></header>
+    <header class="w3-container">
     <a href="index.html"><img src="assests/images/logo.png" style="height:60px;width:60px;" alt="logo" /></a>
     <a href="login.html"> Login </a>
     </header>
     <br>
 
     <!--<h2>Content Div</h2>-->
+    <div class="img">
     <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" style="height:500px;width:500px;"></a>
-    <br>
+    </div>
+    
+    <div class="form">
     <form autocomplete="off" action="payment.html" method="get">
     <label for="adults">Adults:</label>
     <input name="adults" type="number" id="number" min="1" max="10" required/>
@@ -44,8 +65,9 @@
     <input name="total" type="" readonly />
     <br>
     <a href="payment.html"><input type="submit" value="BOOK NOW"></a>
-    <!-- <small>BOOK NOW</small>--> 
+    </div>
     </form>
+    <div class="description">
     <h2>Radisson Blu Hotel</h2>
     <small>RATING</small>
     <br><br>
@@ -61,7 +83,8 @@
     </ul>
     <h5>DESCRIPTION</h5>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe explicabo dignissimos odio facere similique numquam optio obcaecati ab quos, illum cupiditate error architecto, laboriosam quibusdam maiores nostrum! Possimus, quibusdam tenetur.</p>
- 
+    </div>
+
     <!--<h2>Footer Div</h2>-->
     <footer class="w3-container">
         <a href="contact.html"> Contact Us </a>
