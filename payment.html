@@ -2,28 +2,69 @@
 <html lang="en">
 <head>
     <title>Payment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <style>
         html{
             width:100%;
             height:100%;
             margin:0%;
+            font-family: ubuntu, sans-serif;
         }
         body{
             width:100%;
             height:100%;
             background-color:#e0e0e0;
             margin:0%;
+            font-family: ubuntu, sans-serif;
         }
         div.container {
             width: 500px;
             height:100%;
         }
-        header{
+        #header{
                 background-color: rosybrown;
-        }
-        footer{
+            }
+         #header .img1{
+            float: left;
+                display: inline-flex;
+         }   
+            #header a{
+                vertical-align: bottom;
+                color:black;
+                float: right;
+                display: inline-flex;
+                text-decoration: none;
+            }
+            #footer{
                 background-color: rosybrown;
-        }
+            }
+            #footer a{
+                color:black;
+                display:inline;
+                justify-content:left;
+                text-decoration: none;
+            }
+            #footer small{
+                font-size: 10px;
+                display:flex;
+                justify-content:center;
+            }
+            #footer .social{
+                display:flex;
+                justify-content:right;
+            }
+            #header{
+                position:fixed;
+                width:100%;
+                left:0px;
+                top:0px;
+            }
+            #footer {
+                position:sticky;
+                width:100%;
+                bottom:0px;
+                top:auto;
+            }
         .img{
                 background-color: rgb(132,136,139);
                 width: 50%;
@@ -39,14 +80,24 @@
             border-radius: 5px;
             padding: 1% 2%;
         }
+        .pay a{
+            display: inline-flex;
+            color: black;
+            text-decoration: none;
+        }
         </style>
 </head>
 <body>
-    <header class="w3-container">
+    <header class="w3-container" id="header">
+        <div class="img1">
     <a href="index.html"><img src="assests/images/logo.png" Style="height:60px;width:60px" alt="logo" /></a>
-    <a href="#login.html"> Login </a>
+</div>
+<a href="#login.html"> Login </a>
     </header>
-    
+    <br>
+    <br>
+    <br>
+       
     <div class="img">
     <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" style="height:500px;width:500px;"/>
     <br>
@@ -56,37 +107,39 @@
     <br>
     <em>Nh 8, near Mahipalpur Extension, Block R, Mahipalpur Village, Mahipalpur, New Delhi, Delhi 110037</em>
     </div>
+   <br>
    
     <div class="details">
     <Strong>Name:</Strong><em> John Doe</em>
     <br>
-    <br>
     <Strong>Number of Adults:</Strong><em> 2</em>
-    <br>
     <br>
     <Strong>Check-in Date:</Strong><em> 19/10/2021</em>
     <br>
-    <br>
     <Strong>Check-out Date:</Strong><em> 21/10/2021</em>
     </div>
+
     <div class="amt">
     <Strong>Tariff Breakdown:</Strong><em> Rs.1000 * 2 Adults * 5 Nights</em>
-    <br>
     <br>
     <Strong>Total Amount:</Strong><em> Rs.10000</em>
     </div>
     
+    <div class="pay">
     <a href="payment.html">Pay Now</a>
+</div>
     <br>
 
     <!--<h2>Footer Div</h2>-->
-    <footer class="w3-container">
+    <footer class="w3-container" id="footer">
         <a href="contact.html"> Contact Us </a>
         <br>
+        <div class="social">
         <a href="https://www.facebook.com" target="_blank"> <img src="assests/images/facebook.png" style="height:20px;width:22px;" /></a>
         <a href="https://www.instagram.com" target="_blank"> <img src="assests/images/instagram.png" style="height:20px;width:22px;" /></a>
         <a href="https://twitter.com" target="_blank"> <img src="assests/images/twitter.png" style="height:20px;width:22px;" /></a>
-        <br>
+    </div>
+    <br>
         <small> &copy; 2021 ROOM SEARCH PVT.LTD.</small>
     </footer>
 </body>
