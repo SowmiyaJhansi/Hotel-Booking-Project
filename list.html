@@ -3,6 +3,9 @@
 <head>
     <title>List</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <style>
         html{
             width:100%;
@@ -79,33 +82,66 @@
                 bottom:0px;
                 top:auto;
             }
-            #view ul li{
+            #view{
                 color: black;
                 text-decoration:none;
                 font-weight: bold;
                 text-align:center;
             }
-            .map{
+            .btn:hover{
+                background-color: skyblue;
+            }
+            /* .map{
                display: inline-flex;
                visibility: collapse;
-            }
+            } */
         </style>
 </head>
 
 <body>
-    <header class="w3-container" id="header">
-        <div class="img">
-        <a href="index.html"><img src="assests/images/logo.png" Style="height:60px;width:60px" alt="logo" /></a>
-    </div>
-    <a href="#login.html"> Login </a>
-</header>
+    <div class="main-container">
+        <header class="w3-container" id="header">
+        <img src="assests/images/logo.png" style="height:60px;width:60px;" alt="logo" />
+        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#ModalLoginForm">Login</button></a>
+        <div id="ModalLoginForm" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title">Please Login</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form" method="POST" action="">
+                            <input type="hidden" name="_token" value="">
+                            <div class="form-group">
+                                <label class="control-label">Username</label>
+                                <div>
+                                    <input type="email" class="form-control input-lg" name="email" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Password</label>
+                                <div>
+                                    <input type="password" class="form-control input-lg" name="password">
+                                </div>
+                            </div>
+                                <div class="form-group">
+                                <div>
+                                    <button type="submit" class="btn btn-primary" data-dismiss="modal">
+                                        Login
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+            </header>
+        </div><!-- /.modal -->
 
-<ul>
     <div class="view" id="view">
-    <a href="#list view"><li> List View </li></a>
-    <a href="#map view"><li> Map View </li></a>
+    <a href="#list view"><button type="button" class="btn btn-light">List View</button></a>
+    <a href="#map view"><button type="button" class="btn btn-light">Map View</button></a>
 </div>
-</ul>
 <br>
 
     <div class="detail1">
@@ -144,7 +180,7 @@
         <br>
 
         <footer class="w3-container" id="footer">
-            <a href="contact.html"> Contact Us </a>
+            <a href="contact.html"> <button type="button" class="btn btn-info btn-sm">Contact Us</button></a>
             <br>
             <div class="social">
             <a href="https://www.facebook.com" target="_blank"> <img src="assests/images/facebook.png" style="height:20px;width:22px;" /></a>
