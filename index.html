@@ -24,12 +24,17 @@
             #header{
                 background-color: rosybrown; 
             }
+            #header img{
+                margin-left: 1%;
+            }
             #header a{
                 color:black;
                 float: right;
-                display: inline-flex;
+                display: flex;
                 text-decoration: none;
-                align-items: center;
+                align-items: bottom;
+                justify-content: bottom;
+                margin-right: 2%;
             }
             
             #footer{
@@ -40,6 +45,7 @@
                 display:flex;
                 justify-content:left;
                 text-decoration: none;
+                margin-left: 2%;
             }
             #footer small{
                 font-size: 10px;
@@ -49,6 +55,7 @@
             #footer .social{
                 display:flex;
                 justify-content:right;
+                margin-right: 2%;
             }
             #header{
                 position:fixed;
@@ -67,9 +74,10 @@
                 height:380px;
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: cover;   
+                background-size: cover;  
             }
             #search{
+                border: none;
                 border-radius: 12px;
                 align-items: center;
                 display:flex;
@@ -80,15 +88,24 @@
                 font-size: 16px;
                 width:100%;
             }
-            .city-img{
+            #search:focus, input:focus{
+                outline:none;
+            }
+            #img{
+                display: flex;
+                justify-content: space-between;
                 text-align: center;
                 margin: 0% 15%;
+                box-shadow: 10px 10px 10px grey;
             }
             .view a{
                 color:black;
                 text-decoration: none;
                 display:flex;
                 justify-content:center;
+            }
+            .overlay{
+                color: rgba(0, 0, 0, 0.5);
             }
             </style>
 </head>
@@ -111,6 +128,7 @@
     <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" style="height:150px;width:150px;border-radius:25px;" alt="image" />
     <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg" style="height:150px;width:150px;border-radius:25px;" alt="image" />
     <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg" style="height:150px;width:150px;border-radius:25px;" alt="image" />
+    <div class="overlay"></div> 
     </div>
     <br>
     <br>
