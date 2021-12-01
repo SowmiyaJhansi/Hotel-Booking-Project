@@ -99,47 +99,56 @@
             text-decoration: none;
             flex-flow: column wrap;
         }
+        .header-footer{
+                background-color: rosybrown;
+                color:black;
+                /* float: right; */
+                /* display: flex; */
+                text-decoration: none;
+                align-items: bottom;
+                justify-content: bottom;
+                height:100px;
+                /* margin-right: 2%; */
+        }
         </style>
 </head>
 <body>
     <div class="main-container">
-        <header class="w3-container" id="header">
-        <img src="assests/images/logo.png" style="height:60px;width:60px;" alt="logo" />
-        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#ModalLoginForm">Login</button></a>
-        <div id="ModalLoginForm" class="modal fade">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title">Please Login</h1>
-                    </div>
-                    <div class="modal-body">
-                        <form role="form" method="POST" action="">
-                            <input type="hidden" name="_token" value="">
-                            <div class="form-group">
-                                <label class="control-label">Username</label>
-                                <div>
-                                    <input type="email" class="form-control input-lg" name="email" value="">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Password</label>
-                                <div>
-                                    <input type="password" class="form-control input-lg" name="password">
-                                </div>
-                            </div>
-                                <div class="form-group">
-                                <div>
-                                    <button type="submit" class="btn btn-primary" data-dismiss="modal">
-                                        Login
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-            </header>
-        </div><!-- /.modal -->
+        <!-- <header id="header"> -->
+            <header class="header-footer">
+        <img src="assests/images/logo.png" class="logo" id="logo-image" style="Width:10%" alt="logo"/>
+                  <button type="button" id="login" class="btn btn-light btn-sm" data-toggle="modal"
+                                  data-backdrop="false" data-target="#login-modal"
+                                  onclick="headerLogin(event)">LOGIN</button>
+              
+                  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="login-modal-label">Please Login</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+                                  <form id="login-form">
+                                      <div class="login-field">
+                                          <label for="username">Username: </label>
+                                          <input type="text" id="username" name="username" placeholder="Enter Username" required />
+                                      </div>
+                                      <div class="login-field">
+                                          <label for="password">Password: </label>
+                                          <input type="password" id="password" name="password" placeholder="Enter Password" required />
+                                      </div>
+                                  </form>
+                              </div>
+                              <div class="modal-footer">
+                                  <button id="login-button" type="button" class="btn btn-primary" data-dismiss="modal" onclick="login(event)">Login</button>
+                              </div>
+                          </div>
+                      </div>
+                    </header>
+                  </div>
     <br>
     <br>
        
@@ -178,15 +187,44 @@
 
     <!--<h2>Footer Div</h2>-->
     <footer class="w3-container" id="footer">
-        <a href="contact.html"> <button type="button" class="btn btn-info btn-sm">Contact Us</button></a>
-        <br>
-        <div class="social">
-        <a href="https://www.facebook.com" target="_blank"> <img src="assests/images/facebook.png" style="height:20px;width:22px;" /></a>
-        <a href="https://www.instagram.com" target="_blank"> <img src="assests/images/instagram.png" style="height:20px;width:22px;" /></a>
-        <a href="https://twitter.com" target="_blank"> <img src="assests/images/twitter.png" style="height:20px;width:22px;" /></a>
+        <footer class="header-footer">
+            <div id="contact">
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-backdrop="false" data-target="#contact-modal">Contact Us</button>
+                
+                <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="contact-modal-label">Get in touch</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <p>
+                                        Thank you for reaching out!!! <br>
+                                        Please enter you email and we will get back to you.
+                                    </p>
+                                    <label for="email">Email: </label>
+                                    <input type="text" id="email" name="email" placeholder="Enter your email id" required>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Sumbit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright-text" style="text-align:center;">
+                <sub>© 2021 ROOM SEARCH PVT. LTD.</sub>
+            </div>
+    <div class="social">
+    <a href="https://www.facebook.com" target="_blank"> <img src="assests/images/facebook.png" style="height:20px;width:22px;" /></a>
+    <a href="https://www.instagram.com" target="_blank"> <img src="assests/images/instagram.png" style="height:20px;width:22px;" /></a>
+    <a href="https://twitter.com" target="_blank"> <img src="assests/images/twitter.png" style="height:20px;width:22px;" /></a>
     </div>
-    <br>
-        <small> &copy; 2021 ROOM SEARCH PVT.LTD.</small>
-    </footer>
+</footer>
 </body>
 </html>
